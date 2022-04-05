@@ -1,0 +1,344 @@
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  padding: 5em 0 1em 0;
+  font-size: 1.5em;
+  letter-spacing: 0.3em;
+}
+
+p {
+  font-size: 0.75em;
+}
+
+.section {
+  width: 75%;
+  margin: auto;
+}
+
+#sushiya_logo {
+  width: 144px;
+  height: 48px;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/sushiya_header.png);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  letter-spacing: 0.4em;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50%;
+}
+
+.header__top img {
+  margin: 2.5em;
+}
+
+.header__top nav {
+  margin: 2.5em;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.header__top nav p {
+  padding-left: 5em;
+}
+
+.header__tagline {
+  text-align: center;
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main .section__info {
+  height: 35em;
+}
+
+.main .section__info--headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .section__info--headline ::after {
+  content: "- NEWS";
+  padding-left: 1em;
+  color: #ac0000;
+  font-size: 0.5em;
+}
+
+.main .section__info--img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .section__info--img img {
+  width: 23%;
+}
+
+.main .section__info--others p {
+  margin-top: 0.8em;
+}
+
+.main .concept {
+  height: 32em;
+  width: 100vw;
+  background-image: url(../img/concept.png);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: auto 100%;
+}
+
+.main .concept__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 32em;
+  width: 100vw;
+  padding: 4em 0;
+  color: #ededed;
+  letter-spacing: 0.3em;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.main .concept__contents--headline ::before {
+  content: "- CONCEPT";
+  display: block;
+  padding-left: 1em;
+  font-size: 0.5em;
+  font-weight: 100;
+}
+
+.main .concept__contents--headline h2 {
+  padding: 0 2em 0;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.main .concept__contents--description {
+  padding-top: 2em;
+}
+
+.main .concept__contents--description p {
+  line-height: 4em;
+}
+
+.main .concept::after {
+  content: "";
+  display: block;
+  height: 25em;
+  width: 100vw;
+  background-color: #e4e4e4;
+}
+
+.main .section__menu {
+  height: 42em;
+  padding: 0 5em;
+}
+
+.main .section__menu--headline ::after {
+  content: "- MENU";
+  padding-left: 1em;
+  color: #ac0000;
+  font-size: 0.5em;
+}
+
+.main .section__menu--contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .section__menu--contents dl {
+  width: 60%;
+  margin: 0.8em;
+}
+
+.main .section__menu--contents dl dt img {
+  width: 100%;
+}
+
+.main .section__menu--contents dl dd {
+  height: 12em;
+  padding-left: 1.5em;
+  background-color: white;
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+
+.main .section__menu--contents dl dd h3 {
+  padding: 1em 0;
+  font-size: 1.5em;
+}
+
+.main .section__menu--contents dl dd h3 ::after {
+  content: "";
+  display: inline-block;
+  height: 1em;
+  width: 0.6em;
+  margin-right: 0.3em;
+  background-color: #ac0000;
+}
+
+.main .section__menu--others {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main .section__menu--others p {
+  width: 10.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ac0000;
+}
+
+.main .access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10em;
+}
+
+.main .access__contents {
+  width: 58%;
+}
+
+.main .access__contents--headline {
+  text-align: center;
+}
+
+.main .access__contents--headline ::after {
+  content: "- ACCESS";
+  padding-left: 1em;
+  color: #ac0000;
+  font-size: 0.5em;
+}
+
+.main .access__contents--map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .access__contents--map p {
+  width: 10.5em;
+  margin: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ac0000;
+}
+
+.main .access__details {
+  width: 42%;
+  margin: 11em 0 0 1em;
+}
+
+.main .access__details--description dl {
+  font-size: 0.9em;
+  font-weight: 200;
+  line-height: 2.8em;
+}
+
+.main .access__details--description dl dt {
+  float: left;
+  clear: left;
+  width: 8em;
+  text-align: right;
+}
+
+.main .access__details--description dl dd {
+  float: left;
+  margin-left: 1em;
+}
+
+.footer {
+  color: white;
+  background-color: #131529;
+}
+
+.footer__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2em 0 1em;
+}
+
+.footer__contents--info {
+  height: 8em;
+}
+
+.footer__contents--info p {
+  padding-top: 1.2em;
+}
+
+.footer__contents nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 24em;
+}
+
+.footer__contents nav p {
+  width: 10em;
+}
+
+.footer__copywrite {
+  padding-bottom: 2em;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
