@@ -14,8 +14,8 @@
 <body>
     <header class="header">
         <div class="header__top">
-            <img id="sushiya_logo" src="./assets/img/sushiya_logo.png" alt="">
-            <nav>
+            <img class="header__top--logo" id="sushiya_logo" src="./assets/img/sushiya_logo.png" alt="">
+            <nav class="header__top--nav" id="js-nav">
                 <p>
                     <a href="">おしながき</a>
                 </p>
@@ -26,6 +26,11 @@
                     <a href="">予約・お問い合わせ</a>
                 </p>
             </nav>
+            <button class="header__top--hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <div class="header__tagline">
             <h1>キャッチコピーが入ります。</h1>
@@ -133,19 +138,19 @@
                 <div class="access__details--description">
                     <dl>
                         <dt>
-                            店名
+                            <span></span>店名
                         </dt>
                         <dd>
                             すし屋の店名
                         </dd>
                         <dt>
-                            住所
+                            <span></span>住所
                         </dt>
                         <dd>
                             神奈川県平塚市1-1-1
                         </dd>
                         <dt>
-                            ご予約<br>
+                            <span></span>ご予約<br>
                             お問い合わせ
                         </dt>
                         <dd>
@@ -153,38 +158,38 @@
                             フォームからも承っております
                         </dd>
                         <dt>
-                            アクセス
+                            <span></span>アクセス
                         </dt>
                         <dd>
                             JR平塚駅 徒歩5分<br>
                             お車の場所：ここに説明が入ります
                         </dd>
                         <dt>
-                            営業時間
+                            <span></span>営業時間
                         </dt>
                         <dd>
                             11時〜14時(L.O 13時)/16時〜21時(L.O 20時)
                         </dd>
                         <dt>
-                            定休日
+                            <span></span>定休日
                         </dt>
                         <dd>
                             月曜日
                         </dd>
                         <dt>
-                            お支払い
+                            <span></span>お支払い
                         </dt>
                         <dd>
                             現金、各種クレジットカード、電子マネーなど
                         </dd>
                         <dt>
-                            席数
+                            <span></span>席数
                         </dt>
                         <dd>
                             カウンター10席/テーブル10席
                         </dd>
                         <dt>
-                            駐車場
+                            <span></span>駐車場
                         </dt>
                         <dd>
                             ３台(予約時にお伝えください)
@@ -217,5 +222,6 @@
             <p>©︎ 寿司屋 All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

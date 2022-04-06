@@ -11,10 +11,15 @@
 // * color/text/font/line-height
 // * cursor
 
+//Color定義
+$red: rgb(172, 0, 0);
+$black: #000000;
+$navy: rgb(19, 21, 41);
+$white: #fff;
+$lightGray: #e4e4e4;
+
 //---------------------------------
-
 //共通したいスタイルを最初にまとめておく
-
 body {
   font-family: "Noto Serif JP", serif;
 }
@@ -52,27 +57,32 @@ p {
   height: 100vh;
   background-image: url(../img/sushiya_header.png);
   background-size: cover;
-  background-color: rgba($color: #000000, $alpha: 0.3);
+  background-color: rgba($color: $black, $alpha: 0.3);
   background-blend-mode: darken;
-  color: white;
+  color: $white;
   letter-spacing: 0.4em;
 
   &__top {
     display: flex;
     justify-content: space-between;
     height: 50%;
+    width: inherit;
 
-    img {
-      margin: 2.5em;
+    &--logo {
+      margin: 2.5em 0 0 2.5em;
     }
 
-    nav {
+    &--nav {
       margin: 2.5em;
       writing-mode: vertical-rl;
 
       p {
         padding-left: 5em;
       }
+    }
+
+    &--button {
+      display: none;
     }
   }
 
@@ -83,7 +93,7 @@ p {
 
 .main {
   width: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.2);
+  background-color: rgba($color: $black, $alpha: 0.2);
 
   .section {
     &__info {
@@ -96,7 +106,7 @@ p {
         ::after {
           content: "- NEWS";
           padding-left: 1em;
-          color: rgb(172, 0, 0);
+          color: $red;
           font-size: 0.5em;
         }
       }
@@ -123,11 +133,11 @@ p {
     height: 32em;
     width: 100vw;
     background-image: url(../img/concept.png);
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    background-position: right;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    background-position: right 0% top 0%;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    background-size: auto 100%;
+    background-size: cover;
 
     &__contents {
       display: flex;
@@ -137,7 +147,7 @@ p {
       height: 32em;
       width: 100vw;
       padding: 4em 0;
-      color: rgb(237, 237, 237);
+      color: $white;
       letter-spacing: 0.3em;
 
       &--headline {
@@ -170,7 +180,7 @@ p {
       display: block;
       height: 25em;
       width: 100vw;
-      background-color: #e4e4e4;
+      background-color: $lightGray;
     }
   }
 
@@ -183,7 +193,7 @@ p {
         ::after {
           content: "- MENU";
           padding-left: 1em;
-          color: rgb(172, 0, 0);
+          color: $red;
           font-size: 0.5em;
         }
       }
@@ -204,7 +214,7 @@ p {
           dd {
             height: 12em;
             padding-left: 1.5em;
-            background-color: white;
+            background-color: $white;
             letter-spacing: 0.2em;
             line-height: 1.2em;
 
@@ -215,10 +225,10 @@ p {
               ::after {
                 content: "";
                 display: inline-block;
-                height: 1em;
-                width: 0.6em;
+                height: 0.8em;
+                width: 0.4em;
                 margin-right: 0.3em;
-                background-color: rgb(172, 0, 0);
+                background-color: $red;
               }
             }
           }
@@ -228,11 +238,13 @@ p {
       &--others {
         display: flex;
         justify-content: flex-end;
+        text-align: center;
 
         p {
-          width: 10.5em;
-          padding-bottom: 0.5em;
-          border-bottom: 1px solid rgb(172, 0, 0);
+          width: 12em;
+          border-bottom: 1px solid $red;
+          font-weight: 700;
+          line-height: 2em;
         }
       }
     }
@@ -251,7 +263,7 @@ p {
         ::after {
           content: "- ACCESS";
           padding-left: 1em;
-          color: rgb(172, 0, 0);
+          color: $red;
           font-size: 0.5em;
         }
       }
@@ -263,10 +275,13 @@ p {
         align-items: flex-end;
 
         p {
-          width: 10.5em;
+          width: 12em;
           margin: 1em;
           padding-bottom: 0.5em;
-          border-bottom: 1px solid rgb(172, 0, 0);
+          border-bottom: 1px solid $red;
+          font-weight: 700;
+          line-height: 2em;
+          text-align: center;
         }
       }
     }
@@ -299,13 +314,13 @@ p {
 }
 
 .footer {
-  color: white;
-  background-color: rgb(19, 21, 41);
+  color: $white;
+  background-color: $navy;
 
   &__contents {
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     padding: 2em 0 1em;
 
     &--info {
@@ -322,7 +337,7 @@ p {
       width: 24em;
 
       p {
-        width: 10em;
+        width: 11em;
       }
     }
   }
@@ -330,5 +345,259 @@ p {
   &__copywrite {
     padding-bottom: 2em;
     text-align: center;
+  }
+}
+
+//-------------------------------------------
+//スマホ用デザイン
+
+@media screen and (max-width: 479px) {
+  .header {
+    &__top {
+      &--nav {
+        position: relative;
+        writing-mode: horizontal-tb;
+        z-index: -3;
+        width: 50%;
+        margin: 0;
+        padding: 2.5em 0;
+
+        p {
+          padding: 0 0 0 2em;
+          line-height: 4em;
+
+          ::before {
+            content: "";
+            display: inline-block;
+            height: 0.8em;
+            width: 0.4em;
+            margin-right: 0.3em;
+            background-color: $red;
+          }
+        }
+
+        &.active {
+          z-index: 0;
+          background-color: $white;
+          color: $black;
+          transition: ease 0.5s;
+        }
+      }
+
+      &--hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 5em;
+        width: 5em;
+        background-color: $red;
+
+        span {
+          position: absolute;
+          left: 15%;
+          width: 70%;
+          height: 1px;
+          background-color: $white;
+          transition: ease 0.5s;
+        }
+
+        span:nth-child(1) {
+          top: 25%;
+        }
+        span:nth-child(2) {
+          top: 50%;
+        }
+        span:nth-child(3) {
+          top: 75%;
+        }
+
+        &.active {
+          background-color: $white;
+
+          span {
+            background-color: $red;
+          }
+
+          span:nth-child(1) {
+            top: 50%;
+            transform: rotate(45deg);
+          }
+          span:nth-child(2) {
+            opacity: 0;
+          }
+          span:nth-child(3) {
+            top: 50%;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    .section {
+      &__info {
+        &--img {
+          flex-wrap: wrap;
+
+          img {
+            width: 48%;
+          }
+
+          img:nth-child(1) {
+            padding-bottom: 1.2em;
+          }
+          img:nth-child(2) {
+            padding-bottom: 1.2em;
+          }
+        }
+      }
+    }
+
+    .concept {
+      background-position: 80%;
+
+      &__contents {
+        display: block;
+        writing-mode: horizontal-tb;
+        padding: 0;
+
+        &--headline {
+          padding: 2em 0 0 1.5em;
+
+          ::before {
+            padding: 0 0 1em;
+          }
+
+          h2 {
+            padding: 0;
+            font-size: 1.3em;
+            letter-spacing: 0.1em;
+          }
+        }
+
+        &--description {
+          padding: 2em 0 0 1.5em;
+
+          p {
+            line-height: 3em;
+          }
+        }
+      }
+    }
+
+    .section {
+      &__menu {
+        padding: 0;
+        height: 60em;
+
+        &--headline {
+          h2 {
+            padding-top: 2.5em;
+          }
+        }
+
+        &--contents {
+          display: block;
+
+          dl {
+            width: 100%;
+            margin: 0 0 1em 0;
+
+            br {
+              display: none;
+            }
+          }
+        }
+        &--others {
+          text-align: center;
+
+          p {
+            width: 100%;
+            padding: 0.8em 0;
+          }
+        }
+      }
+    }
+
+    .access {
+      display: block;
+      height: 90em;
+      padding: 0;
+
+      &__contents {
+        width: 100%;
+
+        &--headline {
+          text-align: start;
+
+          h2 {
+            padding: 3em 0 1em 1.5em;
+          }
+        }
+
+        &--map {
+          align-items: center;
+
+          p {
+            width: 90%;
+            margin: 2em 0;
+          }
+        }
+      }
+
+      &__details {
+        width: 100%;
+        margin: 0;
+
+        &--description {
+          dl {
+            padding-left: 1.5em;
+
+            dt {
+              float: none;
+              clear: none;
+              width: 14em;
+              text-align: left;
+
+              br {
+                display: none;
+              }
+
+              ::before {
+                content: "";
+                display: inline-block;
+                height: 0.8em;
+                width: 0.4em;
+                margin-right: 0.3em;
+                background-color: $red;
+              }
+            }
+
+            dd {
+              float: none;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    p {
+      font-size: 0.7em;
+    }
+
+    &__contents {
+      display: block;
+      padding: 2em 1.4em;
+
+      nav {
+        justify-content: space-around;
+        width: 100%;
+      }
+    }
   }
 }
