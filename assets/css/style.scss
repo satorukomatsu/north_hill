@@ -47,6 +47,7 @@ p {
 //--------------------------------
 
 .header {
+  //ファーストビューを全画面に表示したい
   width: 100vw;
   height: 100vh;
   background-image: url(../img/sushiya_header.png);
@@ -54,7 +55,6 @@ p {
   background-color: rgba($color: #000000, $alpha: 0.3);
   background-blend-mode: darken;
   color: white;
-
   letter-spacing: 0.4em;
 
   &__top {
@@ -75,17 +75,20 @@ p {
       }
     }
   }
+
   &__tagline {
     text-align: center;
   }
 }
 
 .main {
+  width: 100%;
   background-color: rgba($color: #000000, $alpha: 0.2);
 
   .section {
     &__info {
       height: 35em;
+
       &--headline {
         display: flex;
         align-items: flex-end;
@@ -101,6 +104,7 @@ p {
       &--img {
         display: flex;
         justify-content: space-between;
+
         img {
           width: 23%;
         }
@@ -115,6 +119,7 @@ p {
   }
 
   .concept {
+    //背景の画像は職人の顔が見えるようにしたい
     height: 32em;
     width: 100vw;
     background-image: url(../img/concept.png);
@@ -128,12 +133,12 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      writing-mode: vertical-rl;
       height: 32em;
       width: 100vw;
       padding: 4em 0;
       color: rgb(237, 237, 237);
       letter-spacing: 0.3em;
-      writing-mode: vertical-rl;
 
       &--headline {
         ::before {
@@ -150,8 +155,10 @@ p {
           font-weight: 100;
         }
       }
+
       &--description {
         padding-top: 2em;
+
         p {
           line-height: 4em;
         }
@@ -183,6 +190,7 @@ p {
 
       &--contents {
         display: flex;
+
         dl {
           width: 60%;
           margin: 0.8em;
@@ -192,6 +200,7 @@ p {
               width: 100%;
             }
           }
+
           dd {
             height: 12em;
             padding-left: 1.5em;
@@ -202,6 +211,7 @@ p {
             h3 {
               padding: 1em 0;
               font-size: 1.5em;
+
               ::after {
                 content: "";
                 display: inline-block;
@@ -218,6 +228,7 @@ p {
       &--others {
         display: flex;
         justify-content: flex-end;
+
         p {
           width: 10.5em;
           padding-bottom: 0.5em;
@@ -230,10 +241,13 @@ p {
   .access {
     display: flex;
     padding-bottom: 10em;
+
     &__contents {
       width: 58%;
+
       &--headline {
         text-align: center;
+
         ::after {
           content: "- ACCESS";
           padding-left: 1em;
@@ -241,10 +255,13 @@ p {
           font-size: 0.5em;
         }
       }
+
       &--map {
+        //地図の下のリンクを右寄せに
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
         p {
           width: 10.5em;
           margin: 1em;
@@ -260,9 +277,10 @@ p {
 
       &--description {
         dl {
-          font-size: 0.9em;
+          font-size: 0.8em;
           font-weight: 200;
-          line-height: 2.8em;
+          line-height: 3em;
+
           dt {
             float: left;
             clear: left;
@@ -272,7 +290,7 @@ p {
 
           dd {
             float: left;
-            margin-left: 1em;
+            margin-left: 1.5em;
           }
         }
       }
@@ -292,6 +310,7 @@ p {
 
     &--info {
       height: 8em;
+
       p {
         padding-top: 1.2em;
       }
@@ -301,6 +320,7 @@ p {
       display: flex;
       justify-content: space-between;
       width: 24em;
+
       p {
         width: 10em;
       }

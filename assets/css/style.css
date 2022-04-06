@@ -67,6 +67,7 @@ p {
 }
 
 .main {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -129,14 +130,14 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   height: 32em;
   width: 100vw;
   padding: 4em 0;
   color: #ededed;
   letter-spacing: 0.3em;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
 }
 
 .main .concept__contents--headline ::before {
@@ -281,9 +282,9 @@ p {
 }
 
 .main .access__details--description dl {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 200;
-  line-height: 2.8em;
+  line-height: 3em;
 }
 
 .main .access__details--description dl dt {
@@ -295,7 +296,7 @@ p {
 
 .main .access__details--description dl dd {
   float: left;
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
 
 .footer {
