@@ -61,6 +61,7 @@ p {
   background-blend-mode: darken;
   color: $white;
   letter-spacing: 0.4em;
+  transition: all 1s;
 
   &__top {
     display: flex;
@@ -69,7 +70,7 @@ p {
     width: inherit;
 
     &--logo {
-      margin: 2.5em 0 0 2.5em;
+      margin: 2.5em 0 0 5em;
     }
 
     &--nav {
@@ -81,7 +82,7 @@ p {
       }
     }
 
-    &--button {
+    &--hamburger {
       display: none;
     }
   }
@@ -352,15 +353,30 @@ p {
 //スマホ用デザイン
 
 @media screen and (max-width: 479px) {
+  body {
+    &.active {
+      overflow: hidden;
+    }
+  }
+
   .header {
+    &.active {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
     &__top {
+      &--logo {
+        width: 30%;
+        margin: 2.5em 0 0 2em;
+      }
       &--nav {
         position: relative;
         writing-mode: horizontal-tb;
-        z-index: -3;
-        width: 50%;
+        z-index: -1;
+        width: 70%;
         margin: 0;
         padding: 2.5em 0;
+        transition: all ease 1.5s;
 
         p {
           padding: 0 0 0 2em;
@@ -377,10 +393,9 @@ p {
         }
 
         &.active {
-          z-index: 0;
+          z-index: 2;
           background-color: $white;
           color: $black;
-          transition: ease 0.5s;
         }
       }
 
@@ -389,6 +404,7 @@ p {
         top: 0;
         right: 0;
         display: block;
+        z-index: 2;
         height: 5em;
         width: 5em;
         background-color: $red;
@@ -399,7 +415,7 @@ p {
           width: 70%;
           height: 1px;
           background-color: $white;
-          transition: ease 0.5s;
+          transition: all ease 1.5s;
         }
 
         span:nth-child(1) {
@@ -413,6 +429,7 @@ p {
         }
 
         &.active {
+          z-index: 2;
           background-color: $white;
 
           span {

@@ -35,6 +35,8 @@ p {
   background-blend-mode: darken;
   color: #fff;
   letter-spacing: 0.4em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .header__top {
@@ -49,7 +51,7 @@ p {
 }
 
 .header__top--logo {
-  margin: 2.5em 0 0 2.5em;
+  margin: 2.5em 0 0 5em;
 }
 
 .header__top--nav {
@@ -63,7 +65,7 @@ p {
   padding-left: 5em;
 }
 
-.header__top--button {
+.header__top--hamburger {
   display: none;
 }
 
@@ -354,15 +356,27 @@ p {
 }
 
 @media screen and (max-width: 479px) {
+  body.active {
+    overflow: hidden;
+  }
+  .header.active {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header__top--logo {
+    width: 30%;
+    margin: 2.5em 0 0 2em;
+  }
   .header__top--nav {
     position: relative;
     -webkit-writing-mode: horizontal-tb;
         -ms-writing-mode: lr-tb;
             writing-mode: horizontal-tb;
-    z-index: -3;
-    width: 50%;
+    z-index: -1;
+    width: 70%;
     margin: 0;
     padding: 2.5em 0;
+    -webkit-transition: all ease 1.5s;
+    transition: all ease 1.5s;
   }
   .header__top--nav p {
     padding: 0 0 0 2em;
@@ -377,17 +391,16 @@ p {
     background-color: #ac0000;
   }
   .header__top--nav.active {
-    z-index: 0;
+    z-index: 2;
     background-color: #fff;
     color: #000000;
-    -webkit-transition: ease 0.5s;
-    transition: ease 0.5s;
   }
   .header__top--hamburger {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
+    z-index: 2;
     height: 5em;
     width: 5em;
     background-color: #ac0000;
@@ -398,8 +411,8 @@ p {
     width: 70%;
     height: 1px;
     background-color: #fff;
-    -webkit-transition: ease 0.5s;
-    transition: ease 0.5s;
+    -webkit-transition: all ease 1.5s;
+    transition: all ease 1.5s;
   }
   .header__top--hamburger span:nth-child(1) {
     top: 25%;
@@ -411,6 +424,7 @@ p {
     top: 75%;
   }
   .header__top--hamburger.active {
+    z-index: 2;
     background-color: #fff;
   }
   .header__top--hamburger.active span {
